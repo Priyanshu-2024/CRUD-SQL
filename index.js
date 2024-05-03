@@ -36,7 +36,7 @@ app.post("/create", (req, res) => {
 
 //DELETE
 app.delete("/delete/:id", (req, res) => {
-    connection.query(
+  connection.query(
     "DELETE FROM `Employee` WHERE id  =?",
     [req.params.id],
     (err, rows) => {
@@ -53,7 +53,7 @@ app.delete("/delete/:id", (req, res) => {
 
 //update
 app.put("/update", (req, res) => {
-    Employee = req.body;
+  Employee = req.body;
 
   connection.query(
     "UPDATE `Employee` SET ? WHERE id=" + Employee.id,
